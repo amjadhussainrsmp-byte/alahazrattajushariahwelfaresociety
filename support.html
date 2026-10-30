@@ -1,0 +1,1306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123d35">
+  <meta name="description" content="Support Ala Hazrat Tajushshariah Welfare Society. Your contribution helps empower communities through education, skill development and social welfare.">
+  <title>Support Us | AHT Skills Welfare Society</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #123d35;
+      --green-dark: #0b2d27;
+      --green-light: #e4f1e9;
+      --mint: #dff2e8;
+      --lime: #c7ee77;
+      --cream: #fbfaf5;
+      --white: #ffffff;
+      --text: #263a34;
+      --muted: #718078;
+      --border: #e6e9e1;
+      --shadow: 0 18px 55px rgba(18,61,53,.08);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; }
+
+    .container {
+      width: min(1160px, calc(100% - 44px));
+      margin: auto;
+    }
+
+    /* Header */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(251,250,245,.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(18,61,53,.09);
+    }
+
+    .navbar {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: var(--green);
+      color: var(--lime);
+      font-family: serif;
+      font-size: 27px;
+    }
+
+    .brand-name {
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -.2px;
+    }
+
+    .brand-name span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #53635c;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--green); }
+
+    .nav-links .support-link {
+      padding: 12px 20px;
+      border-radius: 30px;
+      background: var(--green);
+      color: white;
+    }
+
+    .nav-links .support-link:hover {
+      background: var(--green-dark);
+      color: white;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--green);
+      font-size: 27px;
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 90px 0 85px;
+      color: white;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(199,238,119,.16), transparent 28%),
+        radial-gradient(circle at 5% 100%, rgba(223,242,232,.12), transparent 32%),
+        var(--green);
+    }
+
+    .hero::after {
+      content: "ع";
+      position: absolute;
+      right: 7%;
+      top: -105px;
+      color: rgba(255,255,255,.045);
+      font-family: serif;
+      font-size: 440px;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--lime);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 25px;
+      height: 2px;
+      background: var(--lime);
+    }
+
+    .hero h1 {
+      margin: 22px 0 20px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(43px, 6vw, 72px);
+      line-height: 1.1;
+      font-weight: 600;
+      letter-spacing: -1.8px;
+    }
+
+    .hero h1 span { color: var(--lime); }
+
+    .hero p {
+      max-width: 600px;
+      color: rgba(255,255,255,.77);
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      min-height: 49px;
+      padding: 0 23px;
+      border: 1px solid transparent;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .btn-lime {
+      background: var(--lime);
+      color: var(--green-dark);
+    }
+
+    .btn-lime:hover { background: #d7f59b; transform: translateY(-2px); }
+
+    .btn-outline {
+      color: white;
+      border-color: rgba(255,255,255,.35);
+    }
+
+    .btn-outline:hover { background: rgba(255,255,255,.1); }
+
+    /* Intro strip */
+
+    .trust-strip {
+      position: relative;
+      z-index: 2;
+      margin-top: -1px;
+      background: #f0f5ed;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trust-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 24px 0;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .trust-icon {
+      width: 37px;
+      height: 37px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: white;
+      font-size: 17px;
+    }
+
+    /* General sections */
+
+    section { padding: 82px 0; }
+
+    .section-heading {
+      max-width: 690px;
+      margin-bottom: 35px;
+    }
+
+    .section-label {
+      color: #75914b;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      margin-top: 12px;
+      color: var(--green);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(31px, 4vw, 45px);
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    .section-heading p {
+      margin-top: 13px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* Bank section */
+
+    .bank-section { background: var(--cream); }
+
+    .bank-layout {
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      gap: 27px;
+      align-items: stretch;
+    }
+
+    .bank-card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .bank-card-top {
+      padding: 27px 30px;
+      color: white;
+      background: var(--green);
+    }
+
+    .bank-card-top .small {
+      color: rgba(255,255,255,.66);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .bank-card-top h3 {
+      margin-top: 8px;
+      font-family: 'Playfair Display', serif;
+      font-size: 25px;
+      font-weight: 600;
+    }
+
+    .bank-card-top p {
+      margin-top: 5px;
+      color: rgba(255,255,255,.7);
+      font-size: 12px;
+    }
+
+    .bank-details { padding: 14px 30px 25px; }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 17px 0;
+      border-bottom: 1px solid #edf0e9;
+    }
+
+    .detail-row:last-child { border-bottom: 0; }
+
+    .detail-label {
+      color: #849088;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+    }
+
+    .detail-value {
+      margin-top: 3px;
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 800;
+      overflow-wrap: anywhere;
+    }
+
+    .copy-btn {
+      flex-shrink: 0;
+      padding: 8px 12px;
+      border: 1px solid #dce7dc;
+      border-radius: 20px;
+      background: #f5f8f2;
+      color: var(--green);
+      font-size: 10px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .copy-btn:hover {
+      background: var(--green);
+      color: white;
+    }
+
+    .copy-btn.copied {
+      background: var(--lime);
+      border-color: var(--lime);
+      color: var(--green-dark);
+    }
+
+    .bank-note {
+      margin: 0 30px 27px;
+      padding: 14px 16px;
+      border-radius: 13px;
+      background: #f2f6ed;
+      color: #627268;
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    /* UPI card */
+
+    .upi-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 35px 28px;
+      border: 1px solid #e1eadf;
+      border-radius: var(--radius);
+      background: var(--mint);
+      text-align: center;
+    }
+
+    .upi-symbol {
+      width: 66px;
+      height: 66px;
+      display: grid;
+      place-items: center;
+      border-radius: 22px;
+      background: white;
+      color: var(--green);
+      font-size: 28px;
+      font-weight: 800;
+      box-shadow: 0 8px 25px rgba(18,61,53,.08);
+    }
+
+    .upi-card h3 {
+      margin-top: 18px;
+      color: var(--green);
+      font-family: 'Playfair Display', serif;
+      font-size: 27px;
+    }
+
+    .upi-card > p {
+      max-width: 300px;
+      margin-top: 9px;
+      color: #65796e;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .qr-placeholder {
+      width: 185px;
+      height: 185px;
+      display: grid;
+      place-items: center;
+      margin: 24px 0 18px;
+      padding: 12px;
+      border: 1px dashed #9db5a5;
+      border-radius: 16px;
+      background: white;
+    }
+
+    .qr-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .qr-placeholder span {
+      max-width: 130px;
+      color: #829187;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .upi-id {
+      margin: 5px 0 15px;
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 800;
+      overflow-wrap: anywhere;
+    }
+
+    .upi-card .copy-btn { background: white; }
+
+    /* Impact */
+
+    .impact-section { background: white; }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 19px;
+    }
+
+    .impact-card {
+      padding: 27px;
+      border: 1px solid var(--border);
+      border-radius: 19px;
+      background: #fff;
+      transition: .25s;
+    }
+
+    .impact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: #cbdcc8;
+    }
+
+    .impact-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: var(--green-light);
+      font-size: 22px;
+    }
+
+    .impact-card h3 {
+      margin-top: 18px;
+      color: var(--green);
+      font-size: 16px;
+    }
+
+    .impact-card p {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.85;
+    }
+
+    /* Process */
+
+    .process-section { background: #f0f5ed; }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .process-step {
+      position: relative;
+      padding: 26px;
+      border-radius: 18px;
+      background: white;
+    }
+
+    .step-number {
+      color: #9bb66e;
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      line-height: 1;
+    }
+
+    .process-step h3 {
+      margin-top: 16px;
+      color: var(--green);
+      font-size: 15px;
+    }
+
+    .process-step p {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    /* Transparency */
+
+    .transparency {
+      padding: 65px 0;
+      background: var(--green);
+      color: white;
+    }
+
+    .transparency-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .transparency h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      font-weight: 600;
+    }
+
+    .transparency p {
+      max-width: 690px;
+      margin-top: 12px;
+      color: rgba(255,255,255,.72);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .transparency .btn { white-space: nowrap; }
+
+    /* Contact */
+
+    .contact-section { background: var(--cream); }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      padding: 34px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: white;
+    }
+
+    .contact-box h3 {
+      color: var(--green);
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+    }
+
+    .contact-box p {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 13px;
+      align-content: center;
+    }
+
+    .contact-list a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-list span {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--green-light);
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 55px 0 22px;
+      background: var(--green-dark);
+      color: white;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 38px;
+    }
+
+    .footer-brand {
+      max-width: 340px;
+      color: rgba(255,255,255,.68);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .footer-brand h3 {
+      margin-bottom: 13px;
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 23px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 16px;
+      color: var(--lime);
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .footer-column a {
+      display: block;
+      margin: 10px 0;
+      color: rgba(255,255,255,.68);
+      font-size: 12px;
+    }
+
+    .footer-column a:hover { color: var(--lime); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.13);
+      color: rgba(255,255,255,.48);
+      font-size: 10px;
+    }
+
+    /* Toast */
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 25px;
+      z-index: 200;
+      transform: translate(-50%, 20px);
+      padding: 12px 20px;
+      border-radius: 30px;
+      background: var(--green-dark);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      opacity: 0;
+      pointer-events: none;
+      transition: .25s;
+      box-shadow: 0 8px 30px rgba(0,0,0,.2);
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .nav-links { gap: 15px; }
+      .nav-links a { font-size: 11px; }
+      .bank-layout { grid-template-columns: 1fr 1fr; }
+      .footer-grid { gap: 25px; }
+    }
+
+    @media (max-width: 700px) {
+      .container { width: min(100% - 34px, 560px); }
+
+      .navbar { min-height: 72px; }
+      .menu-toggle { display: block; }
+
+      .nav-links {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 22px 22px;
+        background: var(--cream);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.open { display: flex; }
+
+      .nav-links a {
+        display: block;
+        padding: 13px 8px;
+        font-size: 13px;
+      }
+
+      .nav-links .support-link {
+        margin-top: 7px;
+        text-align: center;
+      }
+
+      .hero { padding: 70px 0 68px; }
+      .hero::after { right: -100px; font-size: 300px; }
+      .hero p { font-size: 14px; }
+
+      .trust-inner {
+        grid-template-columns: 1fr;
+        gap: 13px;
+      }
+
+      .trust-item { justify-content: flex-start; }
+
+      section { padding: 62px 0; }
+
+      .bank-layout,
+      .contact-box { grid-template-columns: 1fr; }
+
+      .impact-grid,
+      .process-grid { grid-template-columns: 1fr; }
+
+      .impact-card { padding: 23px; }
+
+      .transparency-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .transparency h2 { font-size: 29px; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+
+      .footer-bottom {
+        flex-direction: column;
+        line-height: 1.8;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand-name { font-size: 11px; }
+      .brand-mark { width: 41px; height: 41px; }
+      .hero h1 { font-size: 43px; }
+      .bank-card-top { padding: 23px; }
+      .bank-details { padding: 12px 20px 20px; }
+      .bank-note { margin: 0 20px 20px; }
+      .detail-value { font-size: 12px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-brand { grid-column: auto; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <a href="home.html" class="brand">
+      <div class="brand-mark">ع</div>
+      <div class="brand-name">
+        AHT Skills Welfare Society
+        <span>Service · Empowerment · Humanity</span>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="founder.html">Founder</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="support.html" class="support-link active">Support Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow">Be a part of the change</div>
+        <h1>Your support.<br>Someone's <span>opportunity.</span></h1>
+        <p>
+          Every meaningful change begins with people who care. Your contribution
+          can help us expand educational opportunities, develop practical skills
+          and strengthen communities through purposeful social initiatives.
+        </p>
+        <div class="hero-actions">
+          <a href="#bank-details" class="btn btn-lime">Contribute Now <span>↗</span></a>
+          <a href="#our-impact" class="btn btn-outline">See Your Impact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust strip -->
+  <div class="trust-strip">
+    <div class="container trust-inner">
+      <div class="trust-item">
+        <div class="trust-icon">🤝</div>
+        <span>Support meaningful initiatives</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">📚</div>
+        <span>Invest in education and skills</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🌱</div>
+        <span>Help communities grow</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bank details -->
+  <section class="bank-section" id="bank-details">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-label">Make a contribution</div>
+        <h2>Support our work</h2>
+        <p>
+          You can contribute directly to the organisation through bank transfer.
+          Please verify the account details before making a transaction.
+        </p>
+      </div>
+
+      <div class="bank-layout">
+
+        <div class="bank-card">
+          <div class="bank-card-top">
+            <div class="small">Official organisation account</div>
+            <h3>Bank Transfer Details</h3>
+            <p>Ala Hazrat Tajushshariah Welfare Society</p>
+          </div>
+
+          <div class="bank-details">
+
+            <div class="detail-row">
+              <div>
+                <div class="detail-label">Account Holder Name</div>
+                <div class="detail-value" id="accountHolder">[Organisation's registered account name]</div>
+              </div>
+              <button class="copy-btn" data-copy="accountHolder">Copy</button>
+            </div>
+
+            <div class="detail-row">
+              <div>
+                <div class="detail-label">Bank Name</div>
+                <div class="detail-value" id="bankName">[Bank Name]</div>
+              </div>
+              <button class="copy-btn" data-copy="bankName">Copy</button>
+            </div>
+
+            <div class="detail-row">
+              <div>
+                <div class="detail-label">Account Number</div>
+                <div class="detail-value" id="accountNumber">[Bank Account Number]</div>
+              </div>
+              <button class="copy-btn" data-copy="accountNumber">Copy</button>
+            </div>
+
+            <div class="detail-row">
+              <div>
+                <div class="detail-label">IFSC Code</div>
+                <div class="detail-value" id="ifscCode">[IFSC Code]</div>
+              </div>
+              <button class="copy-btn" data-copy="ifscCode">Copy</button>
+            </div>
+
+            <div class="detail-row">
+              <div>
+                <div class="detail-label">Branch</div>
+                <div class="detail-value" id="branchName">[Branch Name]</div>
+              </div>
+              <button class="copy-btn" data-copy="branchName">Copy</button>
+            </div>
+
+            <div class="detail-row">
+              <div>
+                <div class="detail-label">Account Type</div>
+                <div class="detail-value" id="accountType">[Savings / Current]</div>
+              </div>
+              <button class="copy-btn" data-copy="accountType">Copy</button>
+            </div>
+
+          </div>
+
+          <div class="bank-note">
+            <strong>Important:</strong> Please ensure that the beneficiary name
+            and account details match the organisation's verified bank records
+            before transferring funds.
+          </div>
+        </div>
+
+        <!-- UPI -->
+        <div class="upi-card">
+          <div class="upi-symbol">₹</div>
+          <h3>Contribute via UPI</h3>
+          <p>
+            Use your preferred UPI application to make a contribution
+            using the organisation's official UPI details.
+          </p>
+
+          <div class="qr-placeholder">
+            <!-- Replace the placeholder below with the official QR image.
+                 Example: <img src="images/organisation-upi-qr.png" alt="Official UPI QR Code"> -->
+            <span>Place official UPI QR code here</span>
+          </div>
+
+          <div class="section-label">Official UPI ID</div>
+          <div class="upi-id" id="upiId">[Organisation UPI ID]</div>
+
+          <button class="copy-btn" data-copy="upiId">Copy UPI ID</button>
+
+          <p style="margin-top:18px;font-size:10px;">
+            Always verify the beneficiary name displayed in your UPI app
+            before confirming your payment.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section class="impact-section" id="our-impact">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-label">Where your support matters</div>
+        <h2>Help create lasting opportunities</h2>
+        <p>
+          Your contribution can strengthen initiatives that promote learning,
+          self-reliance, dignity and community well-being.
+        </p>
+      </div>
+
+      <div class="impact-grid">
+        <article class="impact-card">
+          <div class="impact-icon">🎓</div>
+          <h3>Education & Learning</h3>
+          <p>
+            Support educational initiatives, learning resources and opportunities
+            that help children and young people build a better future.
+          </p>
+        </article>
+
+        <article class="impact-card">
+          <div class="impact-icon">💻</div>
+          <h3>Skills & Employment</h3>
+          <p>
+            Help promote vocational training, computer literacy, practical
+            skills and pathways towards economic independence.
+          </p>
+        </article>
+
+        <article class="impact-card">
+          <div class="impact-icon">🤲</div>
+          <h3>Community Welfare</h3>
+          <p>
+            Contribute towards community support, awareness programmes and
+            initiatives that respond to local needs.
+          </p>
+        </article>
+
+        <article class="impact-card">
+          <div class="impact-icon">👩</div>
+          <h3>Women Empowerment</h3>
+          <p>
+            Encourage skill-building, awareness and opportunities that
+            strengthen the participation and independence of women.
+          </p>
+        </article>
+
+        <article class="impact-card">
+          <div class="impact-icon">🌍</div>
+          <h3>Social Awareness</h3>
+          <p>
+            Support awareness initiatives around education, health, hygiene,
+            road safety and responsible citizenship.
+          </p>
+        </article>
+
+        <article class="impact-card">
+          <div class="impact-icon">✨</div>
+          <h3>Youth Development</h3>
+          <p>
+            Help young people access platforms for participation, creativity,
+            talent development and constructive social engagement.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to contribute -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-label">A simple process</div>
+        <h2>How to contribute</h2>
+        <p>
+          Making a contribution is straightforward. Follow these steps
+          to help us receive and acknowledge your support.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-step">
+          <div class="step-number">01</div>
+          <h3>Choose your method</h3>
+          <p>
+            Select a bank transfer or the organisation's verified UPI
+            payment method.
+          </p>
+        </article>
+
+        <article class="process-step">
+          <div class="step-number">02</div>
+          <h3>Complete your transfer</h3>
+          <p>
+            Verify the beneficiary details carefully and complete the
+            transaction through your banking application.
+          </p>
+        </article>
+
+        <article class="process-step">
+          <div class="step-number">03</div>
+          <h3>Inform the organisation</h3>
+          <p>
+            Contact the organisation with your transaction reference
+            so your contribution can be identified and acknowledged.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transparency -->
+  <section class="transparency">
+    <div class="container transparency-inner">
+      <div>
+        <div class="eyebrow">Trust and responsibility</div>
+        <h2>Your contribution deserves care.</h2>
+        <p>
+          We believe that every contribution should be handled responsibly
+          and with respect for the purpose for which it is given.
+          For information about donation procedures, documentation,
+          receipts and the organisation's applicable registration status,
+          please contact us before making your contribution.
+        </p>
+      </div>
+      <a href="contact.html" class="btn btn-lime">Contact the Organisation ↗</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-box">
+        <div>
+          <div class="section-label">Need assistance?</div>
+          <h3>We are here to help.</h3>
+          <p>
+            If you have questions about making a contribution, bank details,
+            payment confirmation or the organisation's work, please get in touch.
+            Our team will be glad to assist you.
+          </p>
+        </div>
+
+        <div class="contact-list">
+          <a href="tel:+918057777749"><span>☎</span> +91 80577 77749</a>
+          <a href="tel:+919457166534"><span>☎</span> +91 9457166534</a>
+          <a href="tel:+919639773313"><span>☎</span> +91 9639773313</a>
+          <a href="contact.html"><span>✉</span> Contact & Office Information</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <h3>AHT Skills Welfare Society</h3>
+        An organisation committed to social welfare, skill development,
+        educational opportunities and community empowerment.
+        Together, we can help build a more capable, compassionate and
+        inclusive society.
+      </div>
+
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="activities.html">Activities</a>
+        <a href="projects.html">Our Projects</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Get Involved</h4>
+        <a href="support.html">Support Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="founder.html">Our Founder</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> AHT Skills Welfare Society. All rights reserved.</span>
+      <span>Service · Empowerment · Humanity</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">Copied successfully</div>
+
+<script>
+  // Mobile navigation
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuToggle.textContent = isOpen ? '×' : '☰';
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.textContent = '☰';
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Copy bank and UPI details
+  const toast = document.getElementById('toast');
+  let toastTimer;
+
+  function showToast(message) {
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+  }
+
+  async function copyText(value) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(value);
+      } else {
+        const temporary = document.createElement('textarea');
+        temporary.value = value;
+        temporary.style.position = 'fixed';
+        temporary.style.opacity = '0';
+        document.body.appendChild(temporary);
+        temporary.select();
+        const copied = document.execCommand('copy');
+        temporary.remove();
+        if (!copied) throw new Error('Copy failed');
+      }
+      return true;
+    } catch (error) {
+      showToast('Unable to copy. Please select the details manually.');
+      return false;
+    }
+  }
+
+  document.querySelectorAll('[data-copy]').forEach(button => {
+    button.addEventListener('click', async () => {
+      const target = document.getElementById(button.dataset.copy);
+      if (!target) return;
+
+      const value = target.textContent.trim();
+
+      if (!value || value.startsWith('[')) {
+        showToast('Please add the verified details first.');
+        return;
+      }
+
+      const success = await copyText(value);
+
+      if (success) {
+        const original = button.textContent;
+        button.textContent = 'Copied ✓';
+        button.classList.add('copied');
+        showToast('Copied to clipboard');
+
+        setTimeout(() => {
+          button.textContent = original;
+          button.classList.remove('copied');
+        }, 1800);
+      }
+    });
+  });
+
+  // Current year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
+  
