@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#123d35">
-<meta name="description" content="Explore the activities and community programmes of Ala Hazrat Tajushshariah Welfare Society, including skill development, awareness, community engagement and digital literacy.">
+<meta name="description" content="Explore the activities of Ala Hazrat Tajushshariah Welfare Society, including skill development, awareness campaigns, community engagement and digital literacy.">
 <title>Our Activities | Ala Hazrat Tajushshariah Welfare Society</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,257 +14,243 @@
 
 <style>
 :root{
---forest:#123d35;
---forest2:#1c594a;
---mint:#dff2e8;
---lime:#c7ee77;
---gold:#e5b96b;
---ink:#172b27;
---muted:#64736e;
---cream:#fbfaf5;
---white:#fff;
---line:rgba(18,61,53,.13);
---shadow:0 22px 70px rgba(13,43,36,.12);
---radius:24px
+  --forest:#123d35;
+  --forest2:#1c594a;
+  --mint:#dff2e8;
+  --lime:#c7ee77;
+  --gold:#e5b96b;
+  --ink:#172b27;
+  --muted:#64736e;
+  --cream:#fbfaf5;
+  --white:#fff;
+  --line:rgba(18,61,53,.13);
+  --shadow:0 22px 70px rgba(13,43,36,.12);
+  --radius:24px;
 }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:95px}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{
-margin:0;
-background:var(--cream);
-color:var(--ink);
-font-family:'DM Sans',sans-serif;
-line-height:1.65;
-overflow-x:hidden
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:'DM Sans',sans-serif;
+  line-height:1.65;
+  overflow-x:hidden;
 }
 a{color:inherit;text-decoration:none}
 button{font:inherit}
 img{display:block;max-width:100%}
+.container{width:min(1180px,calc(100% - 44px));margin:auto}
 
-.container{
-width:min(1180px,calc(100% - 44px));
-margin:auto
-}
-
-/* NAVIGATION */
+/* HEADER */
 
 header{
-position:sticky;
-top:0;
-z-index:30;
-background:rgba(251,250,245,.94);
-backdrop-filter:blur(14px);
-border-bottom:1px solid var(--line)
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(251,250,245,.97);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
 }
 
 .nav{
-min-height:82px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:24px
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
 }
 
 .brand{
-display:flex;
-align-items:center;
-gap:12px;
-min-width:0
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
 }
 
 .brand-mark{
-width:47px;
-height:47px;
-border-radius:15px;
-background:var(--forest);
-display:grid;
-place-items:center;
-color:var(--lime);
-font-family:'Playfair Display';
-font-size:1.45rem;
-flex-shrink:0
+  width:47px;
+  height:47px;
+  border-radius:15px;
+  background:var(--forest);
+  display:grid;
+  place-items:center;
+  color:var(--lime);
+  font-family:'Playfair Display',serif;
+  font-size:1.45rem;
+  flex-shrink:0;
 }
 
 .brand-name{
-font-family:Manrope;
-font-weight:800;
-font-size:.92rem;
-line-height:1.2;
-max-width:265px;
-color:var(--forest)
+  font-family:Manrope,sans-serif;
+  font-weight:800;
+  font-size:.92rem;
+  line-height:1.2;
+  max-width:265px;
+  color:var(--forest);
 }
 
 .brand-name small{
-display:block;
-margin-top:5px;
-font:800 .58rem 'DM Sans';
-letter-spacing:.16em;
-color:var(--forest2)
+  display:block;
+  margin-top:5px;
+  font:800 .58rem 'DM Sans',sans-serif;
+  letter-spacing:.16em;
+  color:var(--forest2);
 }
 
 .nav-links{
-display:flex;
-align-items:center;
-gap:24px;
-font-size:.84rem;
-font-weight:700;
-color:#3e514b
+  display:flex;
+  align-items:center;
+  gap:24px;
+  font-size:.84rem;
+  font-weight:700;
+  color:#3e514b;
 }
 
 .nav-links a{transition:.2s}
-.nav-links a:hover,
-.nav-links a.active{color:var(--forest)}
-
+.nav-links a:hover,.nav-links a.active{color:var(--forest)}
 .nav-links a.active{position:relative}
-
 .nav-links a.active:after{
-content:"";
-position:absolute;
-left:0;
-right:0;
-bottom:-11px;
-height:2px;
-background:var(--gold)
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:-11px;
+  height:2px;
+  background:var(--gold);
 }
 
 .nav-cta{
-background:var(--forest);
-color:white!important;
-padding:12px 18px;
-border-radius:999px
+  background:var(--forest);
+  color:white!important;
+  padding:12px 18px;
+  border-radius:999px;
 }
 
 .nav-cta:after{display:none!important}
 
 .menu-btn{
-display:none;
-border:0;
-background:none;
-color:var(--forest);
-font-size:25px;
-cursor:pointer
+  display:none;
+  border:0;
+  background:none;
+  color:var(--forest);
+  font-size:27px;
+  cursor:pointer;
+  padding:8px;
 }
 
 /* HERO */
 
 .hero{
-position:relative;
-overflow:hidden;
-background:var(--forest);
-color:white;
-min-height:510px;
-display:flex;
-align-items:center
+  position:relative;
+  overflow:hidden;
+  background:var(--forest);
+  color:white;
+  min-height:500px;
+  display:flex;
+  align-items:center;
 }
 
 .hero:before{
-content:"";
-position:absolute;
-inset:0;
-background:
-linear-gradient(90deg,rgba(8,39,32,.97),rgba(8,39,32,.86) 54%,rgba(8,39,32,.52)),
-url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=2000&q=85')
-center/cover;
-opacity:.72
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(8,39,32,.97),rgba(8,39,32,.86) 54%,rgba(8,39,32,.52)),
+    url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=2000&q=85')
+    center/cover;
 }
 
 .hero:after{
-content:"";
-position:absolute;
-width:560px;
-height:560px;
-border:1px solid rgba(199,238,119,.19);
-border-radius:50%;
-right:-170px;
-top:-300px;
-box-shadow:
-0 0 0 65px rgba(199,238,119,.035),
-0 0 0 130px rgba(199,238,119,.025)
+  content:"";
+  position:absolute;
+  width:560px;
+  height:560px;
+  border:1px solid rgba(199,238,119,.19);
+  border-radius:50%;
+  right:-170px;
+  top:-300px;
+  box-shadow:0 0 0 65px rgba(199,238,119,.035),
+             0 0 0 130px rgba(199,238,119,.025);
 }
 
 .hero-content{
-position:relative;
-z-index:2;
-padding:88px 0;
-max-width:800px
+  position:relative;
+  z-index:2;
+  padding:85px 0;
+  max-width:800px;
 }
 
 .breadcrumb{
-font-size:.78rem;
-color:#d6e8df;
-margin-bottom:26px
+  font-size:.78rem;
+  color:#d6e8df;
+  margin-bottom:26px;
 }
-
 .breadcrumb a{color:#fff}
 
 .eyebrow{
-display:inline-flex;
-align-items:center;
-gap:10px;
-text-transform:uppercase;
-letter-spacing:.16em;
-font-size:.72rem;
-font-weight:800;
-color:var(--lime)
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-size:.72rem;
+  font-weight:800;
+  color:var(--lime);
 }
-
 .eyebrow:before{
-content:"";
-width:25px;
-height:1px;
-background:var(--lime)
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--lime);
 }
 
 h1,h2,h3,h4{
-font-family:Manrope,sans-serif;
-letter-spacing:-.045em;
-line-height:1.12;
-margin-top:0
+  font-family:Manrope,sans-serif;
+  letter-spacing:-.045em;
+  line-height:1.12;
+  margin-top:0;
 }
 
 h1{
-font-size:clamp(2.9rem,6vw,5.5rem);
-max-width:850px;
-margin:20px 0 18px;
-font-weight:800
+  font-size:clamp(2.9rem,6vw,5.5rem);
+  max-width:850px;
+  margin:20px 0 18px;
+  font-weight:800;
 }
-
 h1 em{
-font-family:'Playfair Display',serif;
-font-weight:600;
-color:var(--lime)
+  font-family:'Playfair Display',serif;
+  font-weight:600;
+  color:var(--lime);
 }
 
 .hero p{
-font-size:1.04rem;
-line-height:1.8;
-color:#d0e0d9;
-max-width:680px;
-margin:0
+  font-size:1.04rem;
+  line-height:1.8;
+  color:#d0e0d9;
+  max-width:680px;
+  margin:0;
 }
 
 .hero-actions{
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-margin-top:30px
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:30px;
 }
 
 .btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-padding:14px 20px;
-border-radius:999px;
-border:1px solid transparent;
-font-weight:800;
-font-size:.9rem;
-transition:.25s;
-cursor:pointer
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:14px 20px;
+  border-radius:999px;
+  border:1px solid transparent;
+  font-weight:800;
+  font-size:.9rem;
+  transition:.25s;
+  cursor:pointer;
 }
-
 .btn:hover{transform:translateY(-3px)}
 .btn-primary{background:var(--lime);color:var(--forest)}
 .btn-outline{border-color:rgba(255,255,255,.45);color:white}
@@ -271,27 +258,27 @@ cursor:pointer
 /* TICKER */
 
 .ticker{
-background:var(--lime);
-color:var(--forest);
-overflow:hidden;
-white-space:nowrap;
-padding:13px 0;
-font-weight:800;
-font-size:.77rem;
-letter-spacing:.13em
+  background:var(--lime);
+  color:var(--forest);
+  overflow:hidden;
+  white-space:nowrap;
+  padding:13px 0;
+  font-weight:800;
+  font-size:.77rem;
+  letter-spacing:.13em;
 }
 
 .ticker-track{
-display:flex;
-justify-content:space-around;
-gap:38px;
-min-width:max-content
+  display:flex;
+  justify-content:space-around;
+  gap:38px;
+  min-width:max-content;
 }
 
 .ticker-track span:after{
-content:"✳";
-margin-left:38px;
-color:var(--forest2)
+  content:"✳";
+  margin-left:38px;
+  color:var(--forest2);
 }
 
 /* INTRODUCTION */
@@ -299,31 +286,31 @@ color:var(--forest2)
 .intro{padding:76px 0 38px}
 
 .intro-grid{
-display:grid;
-grid-template-columns:1fr 1.05fr;
-gap:70px;
-align-items:end
+  display:grid;
+  grid-template-columns:1fr 1.05fr;
+  gap:70px;
+  align-items:end;
 }
 
 .section-label{
-color:var(--forest2);
-font-size:.72rem;
-font-weight:800;
-letter-spacing:.17em;
-text-transform:uppercase
+  color:var(--forest2);
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.17em;
+  text-transform:uppercase;
 }
 
 .intro h2{
-font-size:clamp(2rem,4vw,3.25rem);
-color:var(--forest);
-margin:12px 0 0
+  font-size:clamp(2rem,4vw,3.25rem);
+  color:var(--forest);
+  margin:12px 0 0;
 }
 
 .intro p{
-color:var(--muted);
-font-size:.98rem;
-margin:0;
-line-height:1.85
+  color:var(--muted);
+  font-size:.98rem;
+  margin:0;
+  line-height:1.85;
 }
 
 /* ACTIVITIES */
@@ -331,175 +318,183 @@ line-height:1.85
 .activities{padding:30px 0 95px}
 
 .section-head{
-display:flex;
-justify-content:space-between;
-align-items:end;
-gap:25px;
-margin-bottom:27px
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:25px;
+  margin-bottom:27px;
 }
 
 .section-head h2{
-font-size:clamp(1.9rem,3.5vw,2.55rem);
-color:var(--forest);
-margin:9px 0 0
+  font-size:clamp(1.9rem,3.5vw,2.55rem);
+  color:var(--forest);
+  margin:9px 0 0;
 }
 
 .section-head p{
-font-size:.83rem;
-color:var(--muted);
-margin:0
+  font-size:.83rem;
+  color:var(--muted);
+  margin:0;
 }
 
 .filters{
-display:flex;
-flex-wrap:wrap;
-gap:9px;
-margin-bottom:25px
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-bottom:30px;
 }
 
 .filter{
-border:1px solid var(--line);
-background:transparent;
-color:#40544d;
-border-radius:999px;
-padding:9px 16px;
-font:700 .77rem 'DM Sans';
-cursor:pointer;
-transition:.2s
+  border:1px solid var(--line);
+  background:transparent;
+  color:#40544d;
+  border-radius:999px;
+  padding:10px 17px;
+  font:700 .82rem 'DM Sans',sans-serif;
+  cursor:pointer;
+  transition:.2s;
 }
 
-.filter:hover,
-.filter.active{
-background:var(--forest);
-border-color:var(--forest);
-color:white
+.filter:hover,.filter.active{
+  background:var(--forest);
+  border-color:var(--forest);
+  color:white;
 }
 
 .activity-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
 }
 
 .activity-card{
-background:var(--white);
-border:1px solid var(--line);
-border-radius:var(--radius);
-overflow:hidden;
-box-shadow:0 8px 30px rgba(13,43,36,.045);
-transition:transform .28s,box-shadow .28s
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 8px 30px rgba(13,43,36,.045);
+  transition:transform .28s,box-shadow .28s;
+  opacity:1!important;
+  visibility:visible!important;
+  transform:none!important;
 }
 
 .activity-card:hover{
-transform:translateY(-6px);
-box-shadow:var(--shadow)
+  transform:translateY(-6px)!important;
+  box-shadow:var(--shadow);
 }
 
 .card-image{
-height:195px;
-position:relative;
-overflow:hidden;
-background:var(--mint)
+  height:195px;
+  position:relative;
+  overflow:hidden;
+  background:var(--mint);
 }
 
 .card-image img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:transform .6s
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s;
 }
 
 .activity-card:hover .card-image img{transform:scale(1.05)}
 
 .card-image:after{
-content:"";
-position:absolute;
-inset:45% 0 0;
-background:linear-gradient(transparent,rgba(8,39,32,.45))
+  content:"";
+  position:absolute;
+  inset:45% 0 0;
+  background:linear-gradient(transparent,rgba(8,39,32,.45));
 }
 
 .card-number{
-position:absolute;
-z-index:1;
-left:20px;
-bottom:12px;
-color:white;
-font:1.8rem 'Playfair Display'
+  position:absolute;
+  z-index:1;
+  left:20px;
+  bottom:12px;
+  color:white;
+  font:1.8rem 'Playfair Display',serif;
 }
 
 .card-body{padding:24px 24px 26px}
 
 .tag{
-display:inline-block;
-background:var(--mint);
-color:var(--forest2);
-border-radius:999px;
-padding:5px 11px;
-font-size:.65rem;
-font-weight:800;
-letter-spacing:.09em;
-text-transform:uppercase
+  display:inline-block;
+  background:var(--mint);
+  color:var(--forest2);
+  border-radius:999px;
+  padding:5px 11px;
+  font-size:.65rem;
+  font-weight:800;
+  letter-spacing:.09em;
+  text-transform:uppercase;
 }
 
 .card-body h3{
-font-size:1.36rem;
-color:var(--forest);
-margin:15px 0 10px
+  font-size:1.36rem;
+  color:var(--forest);
+  margin:15px 0 10px;
 }
 
 .card-body p{
-font-size:.84rem;
-color:var(--muted);
-line-height:1.8;
-margin:0
+  font-size:.84rem;
+  color:var(--muted);
+  line-height:1.8;
+  margin:0;
 }
 
 .card-link{
-display:inline-flex;
-align-items:center;
-gap:8px;
-margin-top:17px;
-color:var(--forest2);
-font-size:.78rem;
-font-weight:800
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:17px;
+  color:var(--forest2);
+  font-size:.78rem;
+  font-weight:800;
 }
 
 .card-link span{transition:transform .2s}
 .card-link:hover span{transform:translateX(4px)}
+
 .activity-card[hidden]{display:none!important}
+
+#no-results{
+  color:var(--muted);
+  padding:25px 0;
+}
 
 /* APPROACH */
 
 .approach{
-background:var(--mint);
-padding:70px 0
+  background:var(--mint);
+  padding:70px 0;
 }
 
 .approach-grid{
-display:grid;
-grid-template-columns:1fr 1.1fr;
-gap:65px;
-align-items:center
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  gap:65px;
+  align-items:center;
 }
 
 .approach h2{
-font-size:clamp(2rem,3.7vw,2.9rem);
-color:var(--forest);
-margin:13px 0
+  font-size:clamp(2rem,3.7vw,2.9rem);
+  color:var(--forest);
+  margin:13px 0;
 }
 
 .approach p{
-font-size:.9rem;
-color:var(--muted);
-margin:0
+  font-size:.9rem;
+  color:var(--muted);
+  margin:0;
 }
 
 .approach-note{
-border-left:2px solid var(--gold);
-padding:10px 0 10px 24px;
-color:#40564c;
-font-size:.9rem;
-line-height:1.85
+  border-left:2px solid var(--gold);
+  padding:10px 0 10px 24px;
+  color:#40564c;
+  font-size:.9rem;
+  line-height:1.85;
 }
 
 /* CTA */
@@ -507,668 +502,585 @@ line-height:1.85
 .cta{padding:82px 0}
 
 .cta-box{
-background:var(--forest);
-border-radius:var(--radius);
-padding:48px 55px;
-color:white;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:30px;
-position:relative;
-overflow:hidden
+  background:var(--forest);
+  border-radius:var(--radius);
+  padding:48px 55px;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  position:relative;
+  overflow:hidden;
 }
 
 .cta-box:after{
-content:"";
-position:absolute;
-width:300px;
-height:300px;
-border:1px solid rgba(199,238,119,.2);
-border-radius:50%;
-right:15%;
-top:-205px;
-box-shadow:0 0 0 48px rgba(199,238,119,.04)
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  border:1px solid rgba(199,238,119,.2);
+  border-radius:50%;
+  right:15%;
+  top:-205px;
+  box-shadow:0 0 0 48px rgba(199,238,119,.04);
 }
 
-.cta-box>div,
-.cta-box>a{
-position:relative;
-z-index:1
-}
+.cta-box>div,.cta-box>a{position:relative;z-index:1}
 
 .cta-box h2{
-font-size:clamp(1.8rem,3.5vw,2.65rem);
-margin:0 0 10px
+  font-size:clamp(1.8rem,3.5vw,2.65rem);
+  margin:0 0 10px;
 }
 
 .cta-box p{
-color:#d0e0d9;
-font-size:.87rem;
-margin:0;
-max-width:550px
+  color:#d0e0d9;
+  font-size:.87rem;
+  margin:0;
+  max-width:550px;
 }
 
 /* FOOTER */
 
 footer{
-background:#0c2d27;
-color:white;
-padding:58px 0 22px
+  background:#0c2d27;
+  color:white;
+  padding:58px 0 22px;
 }
 
 .footer-top{
-display:grid;
-grid-template-columns:1.5fr 1fr 1fr;
-gap:55px;
-padding-bottom:38px;
-border-bottom:1px solid rgba(255,255,255,.13)
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:55px;
+  padding-bottom:38px;
+  border-bottom:1px solid rgba(255,255,255,.13);
 }
 
 footer .brand-name{color:white}
 footer .brand-name small{color:var(--lime)}
 
 .footer-top p{
-max-width:380px;
-color:#c4d9cf;
-font-size:.83rem;
-line-height:1.8;
-margin:17px 0 0
+  max-width:380px;
+  color:#c4d9cf;
+  font-size:.83rem;
+  line-height:1.8;
+  margin:17px 0 0;
 }
 
 .footer-top h4{
-font-size:.9rem;
-letter-spacing:0;
-color:white;
-margin:7px 0 16px
+  font-size:.9rem;
+  letter-spacing:0;
+  color:white;
+  margin:7px 0 16px;
 }
 
 .footer-links{display:grid;gap:10px}
 
 .footer-links a{
-font-size:.8rem;
-color:#c4d9cf
+  font-size:.8rem;
+  color:#c4d9cf;
 }
 
 .footer-links a:hover{color:var(--lime)}
 
 .footer-bottom{
-display:flex;
-justify-content:space-between;
-gap:20px;
-padding-top:20px;
-color:#9bb5aa;
-font-size:.72rem
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding-top:20px;
+  color:#9bb5aa;
+  font-size:.72rem;
 }
 
-/* ANIMATION */
-
-.reveal{
-opacity:0;
-transform:translateY(18px);
-transition:opacity .65s ease,transform .65s ease
-}
-
-.reveal.visible{
-opacity:1;
-transform:none
-}
-
-#no-results{
-color:var(--muted);
-padding:25px 0
-}
-
-/* RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:900px){
-.nav-links{gap:15px;font-size:.78rem}
-.activity-grid{grid-template-columns:repeat(2,1fr)}
-.intro-grid,.approach-grid{grid-template-columns:1fr;gap:24px}
-.footer-top{gap:28px}
+  .nav-links{gap:15px;font-size:.78rem}
+  .activity-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .intro-grid,.approach-grid{grid-template-columns:1fr;gap:24px}
+  .footer-top{gap:28px}
 }
 
 @media(max-width:680px){
-.container{width:calc(100% - 34px)}
-.nav{min-height:74px}
-.brand-mark{width:42px;height:42px}
-.brand-name{font-size:.78rem;max-width:230px}
-.menu-btn{display:block}
+  .container{width:calc(100% - 34px)}
+  .nav{min-height:74px}
+  .brand-mark{width:42px;height:42px}
+  .brand-name{font-size:.78rem;max-width:230px}
+  .menu-btn{display:block}
 
-.nav-links{
-display:none;
-position:absolute;
-top:74px;
-left:16px;
-right:16px;
-background:var(--cream);
-padding:14px;
-border:1px solid var(--line);
-border-radius:16px;
-box-shadow:var(--shadow);
-flex-direction:column;
-align-items:stretch;
-gap:0
-}
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:74px;
+    left:16px;
+    right:16px;
+    background:var(--cream);
+    padding:14px;
+    border:1px solid var(--line);
+    border-radius:16px;
+    box-shadow:var(--shadow);
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+  }
 
-.nav-links.open{display:flex}
-.nav-links a{padding:12px 8px}
-.nav-links a.active:after{display:none}
-.nav-cta{margin-top:5px;text-align:center}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px 8px}
+  .nav-links a.active:after{display:none}
+  .nav-cta{margin-top:5px;text-align:center}
 
-.hero{min-height:490px}
-.hero-content{padding:72px 0}
-.hero p{font-size:.92rem}
+  .hero{min-height:470px}
+  .hero-content{padding:65px 0}
+  .hero p{font-size:.92rem}
+  .intro{padding:55px 0 27px}
+  .activities{padding:22px 0 65px}
 
-.intro{padding:55px 0 27px}
-.activities{padding:22px 0 65px}
-.section-head{display:block}
-.section-head p{margin-top:8px}
+  .section-head{display:block}
+  .section-head p{margin-top:8px}
 
-.activity-grid{
-grid-template-columns:1fr;
-gap:16px
-}
+  .activity-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
 
-.card-image{height:210px}
-.card-body{padding:22px}
-.approach{padding:55px 0}
-.cta{padding:55px 0}
+  .card-image{height:220px}
+  .card-body{padding:22px}
 
-.cta-box{
-padding:33px 25px;
-align-items:flex-start;
-flex-direction:column
-}
+  .approach{padding:55px 0}
+  .cta{padding:55px 0}
 
-.footer-top{
-grid-template-columns:1fr 1fr;
-gap:30px
-}
+  .cta-box{
+    padding:33px 25px;
+    align-items:flex-start;
+    flex-direction:column;
+  }
 
-.footer-top>div:first-child{grid-column:1/-1}
+  .footer-top{
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+  }
 
-.footer-bottom{
-flex-direction:column;
-gap:7px
-}
+  .footer-top>div:first-child{grid-column:1/-1}
+
+  .footer-bottom{
+    flex-direction:column;
+    gap:7px;
+  }
 }
 
 @media(prefers-reduced-motion:reduce){
-*,*:before,*:after{
-scroll-behavior:auto!important;
-transition:none!important
-}
-.reveal{opacity:1;transform:none}
+  *,*:before,*:after{
+    scroll-behavior:auto!important;
+    transition:none!important;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER / NAVIGATION -->
-
 <header>
-<div class="container nav">
+  <div class="container nav">
 
-<a class="brand" href="home.html" aria-label="Ala Hazrat Tajushshariah Welfare Society home">
-<span class="brand-mark">ع</span>
-<span class="brand-name">
-Ala Hazrat Tajushshariah Welfare Society
-<small>HUMANITY · DIGNITY · SERVICE</small>
-</span>
-</a>
+    <a class="brand" href="home.html" aria-label="Society home">
+      <span class="brand-mark">ع</span>
+      <span class="brand-name">
+        Ala Hazrat Tajushshariah Welfare Society
+        <small>HUMANITY · DIGNITY · SERVICE</small>
+      </span>
+    </a>
 
-<button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <button class="menu-btn" id="menuBtn"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="navLinks">☰</button>
 
-<nav class="nav-links" id="navLinks" aria-label="Main navigation">
-<a href="home.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="home.html#work">Our Work</a>
-<a href="founder.html">Founder</a>
-<a class="active" href="activities.html">Activities</a>
-<a class="nav-cta" href="contact.html">Get Involved ↗</a>
-</nav>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="home.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="home.html#work">Our Work</a>
+      <a href="founder.html">Founder</a>
+      <a class="active" href="activities.html">Activities</a>
+      <a class="nav-cta" href="contact.html">Get Involved ↗</a>
+    </nav>
 
-</div>
+  </div>
 </header>
 
 <main>
 
-<!-- HERO SECTION -->
-
 <section class="hero">
-<div class="container">
-<div class="hero-content">
+  <div class="container">
+    <div class="hero-content">
 
-<div class="breadcrumb">
-<a href="home.html">Home</a> &nbsp; / &nbsp; Activities
-</div>
+      <div class="breadcrumb">
+        <a href="home.html">Home</a> &nbsp; / &nbsp; Activities
+      </div>
 
-<span class="eyebrow">Our work · Community in action</span>
+      <span class="eyebrow">Our work · Community in action</span>
 
-<h1>Small actions.<br><em>Meaningful change.</em></h1>
+      <h1>Small actions.<br><em>Meaningful change.</em></h1>
 
-<p>
-We bring people together through skill development, awareness,
-community engagement and creative learning—building opportunities
-and encouraging positive change.
-</p>
+      <p>
+        We bring people together through skill development, awareness,
+        community engagement and creative learning—building opportunities
+        and encouraging positive change.
+      </p>
 
-<div class="hero-actions">
-<a class="btn btn-primary" href="#activities">
-Explore our activities <span>↘</span>
-</a>
-<a class="btn btn-outline" href="contact.html">
-Get involved <span>↗</span>
-</a>
-</div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#activities">
+          Explore our activities <span>↘</span>
+        </a>
+        <a class="btn btn-outline" href="contact.html">
+          Get involved <span>↗</span>
+        </a>
+      </div>
 
-</div>
-</div>
+    </div>
+  </div>
 </section>
-
-<!-- HIGHLIGHT STRIP -->
 
 <div class="ticker">
-<div class="ticker-track">
-<span>SKILLS FOR TOMORROW</span>
-<span>AWARENESS FOR ALL</span>
-<span>COMMUNITY FIRST</span>
-<span>DIGITAL INCLUSION</span>
-<span>SKILLS FOR TOMORROW</span>
+  <div class="ticker-track">
+    <span>SKILLS FOR TOMORROW</span>
+    <span>AWARENESS FOR ALL</span>
+    <span>COMMUNITY FIRST</span>
+    <span>DIGITAL INCLUSION</span>
+    <span>SKILLS FOR TOMORROW</span>
+  </div>
 </div>
-</div>
-
-<!-- INTRODUCTION -->
 
 <section class="intro">
-<div class="container intro-grid">
+  <div class="container intro-grid">
 
-<div>
-<span class="section-label">What we do</span>
-<h2>Learning, participation and community progress.</h2>
-</div>
+    <div>
+      <span class="section-label">What we do</span>
+      <h2>Learning, participation and community progress.</h2>
+    </div>
 
-<p>
-Our activities focus on practical knowledge, employable skills,
-social awareness and shared responsibility. Through workshops,
-campaigns and community programmes, we aim to make opportunities
-and useful information more accessible.
-</p>
+    <p>
+      Our activities focus on practical knowledge, employable skills,
+      social awareness and shared responsibility. Through workshops,
+      campaigns and community programmes, we aim to make opportunities
+      and useful information more accessible.
+    </p>
 
-</div>
+  </div>
 </section>
-
-<!-- ACTIVITIES GRID -->
 
 <section class="activities" id="activities">
-<div class="container">
+  <div class="container">
 
-<div class="section-head">
-<div>
-<span class="section-label">Our key initiatives</span>
-<h2>Activities & programmes</h2>
-</div>
-<p>Explore the different areas of our work.</p>
-</div>
+    <div class="section-head">
+      <div>
+        <span class="section-label">Our key initiatives</span>
+        <h2>Activities &amp; programmes</h2>
+      </div>
+      <p>Explore the different areas of our work.</p>
+    </div>
 
-<!-- FILTER BUTTONS -->
+    <div class="filters" role="group" aria-label="Filter activities">
+      <button class="filter active" type="button" data-filter="all">All activities</button>
+      <button class="filter" type="button" data-filter="skills">Skill development</button>
+      <button class="filter" type="button" data-filter="awareness">Awareness</button>
+      <button class="filter" type="button" data-filter="community">Community</button>
+      <button class="filter" type="button" data-filter="culture">Culture &amp; digital</button>
+    </div>
 
-<div class="filters" role="group" aria-label="Filter activities">
-<button class="filter active" data-filter="all">All activities</button>
-<button class="filter" data-filter="skills">Skill development</button>
-<button class="filter" data-filter="awareness">Awareness</button>
-<button class="filter" data-filter="community">Community</button>
-<button class="filter" data-filter="culture">Culture & digital</button>
-</div>
+    <div class="activity-grid" id="activityGrid">
 
-<div class="activity-grid">
+      <article class="activity-card" data-category="skills">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=85"
+               alt="Students participating in a learning session"
+               loading="lazy">
+          <span class="card-number">01</span>
+        </div>
+        <div class="card-body">
+          <span class="tag">Skill development</span>
+          <h3>UPSDM Project</h3>
+          <p>
+            AHT Skills Welfare Society states that it is associated with
+            the Uttar Pradesh Skill Development Mission (UPSDM) as an
+            approved training partner, supporting workforce-oriented
+            training and skill development in Uttar Pradesh.
+          </p>
+          <a class="card-link" href="https://www.upsdm.gov.in/"
+             target="_blank" rel="noopener">
+            Visit UPSDM <span>→</span>
+          </a>
+        </div>
+      </article>
 
-<!-- ACTIVITY 01 -->
+      <article class="activity-card" data-category="skills">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=85"
+               alt="Participants learning together in a workshop"
+               loading="lazy">
+          <span class="card-number">02</span>
+        </div>
+        <div class="card-body">
+          <span class="tag">Training &amp; livelihood</span>
+          <h3>Skill Training Workshops</h3>
+          <p>
+            Practical training areas include tailoring, computer literacy,
+            digital marketing, handicrafts, beauty and wellness, and
+            entrepreneurship—helping participants develop useful,
+            livelihood-oriented capabilities.
+          </p>
+        </div>
+      </article>
 
-<article class="activity-card reveal" data-category="skills">
+      <article class="activity-card" data-category="awareness">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1000&q=85"
+               alt="People participating in a community awareness event"
+               loading="lazy">
+          <span class="card-number">03</span>
+        </div>
+        <div class="card-body">
+          <span class="tag">Public awareness</span>
+          <h3>Awareness Campaigns</h3>
+          <p>
+            Awareness themes include road safety, women’s rights,
+            child education, health and hygiene, digital awareness
+            and drug de-addiction—encouraging informed choices
+            and responsible citizenship.
+          </p>
+        </div>
+      </article>
 
-<div class="card-image">
-<img
-src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=85"
-alt="Students taking part in a learning session"
-loading="lazy">
-<span class="card-number">01</span>
-</div>
+      <article class="activity-card" data-category="community">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1000&q=85"
+               alt="Volunteers working together in a community initiative"
+               loading="lazy">
+          <span class="card-number">04</span>
+        </div>
+        <div class="card-body">
+          <span class="tag">Community service</span>
+          <h3>Community Engagement</h3>
+          <p>
+            Community programmes include festival participation,
+            community clean-up drives and charitable distributions.
+            Support initiatives may include blankets, ration kits
+            and school supplies for people and families in need.
+          </p>
+        </div>
+      </article>
 
-<div class="card-body">
-<span class="tag">Skill development</span>
-<h3>UPSDM Project</h3>
-<p>
-AHT Skills Welfare Society states that it is associated with the
-Uttar Pradesh Skill Development Mission (UPSDM) as an approved
-training partner, supporting workforce-oriented training and
-skill development in Uttar Pradesh.
-</p>
-<a class="card-link" href="https://www.upsdm.gov.in/" target="_blank" rel="noopener">
-Visit UPSDM <span>→</span>
-</a>
-</div>
+      <article class="activity-card" data-category="culture">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1000&q=85"
+               alt="Performers presenting a stage performance"
+               loading="lazy">
+          <span class="card-number">05</span>
+        </div>
+        <div class="card-body">
+          <span class="tag">Arts &amp; expression</span>
+          <h3>Performing Arts &amp; Talent Shows</h3>
+          <p>
+            Musical performances, dance, painting and poetry recitals
+            offer participants a platform to express creativity,
+            share their talents and engage with wider audiences.
+          </p>
+        </div>
+      </article>
 
-</article>
+      <article class="activity-card" data-category="culture">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85"
+               alt="Learner using a laptop for digital education"
+               loading="lazy">
+          <span class="card-number">06</span>
+        </div>
+        <div class="card-body">
+          <span class="tag">Digital inclusion</span>
+          <h3>Digital Literacy &amp; Online Learning</h3>
+          <p>
+            Mobile classes, webinars and e-learning introduce
+            computer skills, internet safety and practical
+            digital tools for learning and everyday life.
+          </p>
+        </div>
+      </article>
 
-<!-- ACTIVITY 02 -->
+    </div>
 
-<article class="activity-card reveal" data-category="skills">
+    <p id="no-results" hidden>No activities found in this category.</p>
 
-<div class="card-image">
-<img
-src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=85"
-alt="Participants learning together in a workshop"
-loading="lazy">
-<span class="card-number">02</span>
-</div>
-
-<div class="card-body">
-<span class="tag">Training & livelihood</span>
-<h3>Skill Training Workshops</h3>
-<p>
-Practical training areas include tailoring, computer literacy,
-digital marketing, handicrafts, beauty and wellness, and
-entrepreneurship—helping participants develop useful,
-livelihood-oriented capabilities.
-</p>
-</div>
-
-</article>
-
-<!-- ACTIVITY 03 -->
-
-<article class="activity-card reveal" data-category="awareness">
-
-<div class="card-image">
-<img
-src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1000&q=85"
-alt="People participating in a community awareness event"
-loading="lazy">
-<span class="card-number">03</span>
-</div>
-
-<div class="card-body">
-<span class="tag">Public awareness</span>
-<h3>Awareness Campaigns</h3>
-<p>
-Awareness themes include road safety, women’s rights, child
-education, health and hygiene, digital awareness and drug
-de-addiction—encouraging informed choices and responsible
-citizenship.
-</p>
-</div>
-
-</article>
-
-<!-- ACTIVITY 04 -->
-
-<article class="activity-card reveal" data-category="community">
-
-<div class="card-image">
-<img
-src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1000&q=85"
-alt="Volunteers working together in a community initiative"
-loading="lazy">
-<span class="card-number">04</span>
-</div>
-
-<div class="card-body">
-<span class="tag">Community service</span>
-<h3>Community Engagement</h3>
-<p>
-Community programmes include festival participation, community
-clean-up drives and charitable distributions. Support initiatives
-may include blankets, ration kits and school supplies for people
-and families in need.
-</p>
-</div>
-
-</article>
-
-<!-- ACTIVITY 05 -->
-
-<article class="activity-card reveal" data-category="culture">
-
-<div class="card-image">
-<img
-src="https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1000&q=85"
-alt="Performers presenting a stage performance"
-loading="lazy">
-<span class="card-number">05</span>
-</div>
-
-<div class="card-body">
-<span class="tag">Arts & expression</span>
-<h3>Performing Arts & Talent Shows</h3>
-<p>
-Musical performances, dance, painting and poetry recitals offer
-participants a platform to express creativity, share their talents
-and engage with wider audiences.
-</p>
-</div>
-
-</article>
-
-<!-- ACTIVITY 06 -->
-
-<article class="activity-card reveal" data-category="culture">
-
-<div class="card-image">
-<img
-src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85"
-alt="Learner using a laptop for digital education"
-loading="lazy">
-<span class="card-number">06</span>
-</div>
-
-<div class="card-body">
-<span class="tag">Digital inclusion</span>
-<h3>Digital Literacy & Online Learning</h3>
-<p>
-Mobile classes, webinars and e-learning introduce computer skills,
-internet safety and practical digital tools for learning and
-everyday life.
-</p>
-</div>
-
-</article>
-
-</div>
-
-<p id="no-results" hidden>No activities found in this category.</p>
-
-</div>
+  </div>
 </section>
-
-<!-- OUR APPROACH -->
 
 <section class="approach">
-<div class="container approach-grid">
+  <div class="container approach-grid">
 
-<div>
-<span class="section-label">Our approach</span>
-<h2>Opportunity grows when communities take part.</h2>
-<p>
-We believe lasting progress is strengthened by access to learning,
-practical skills, awareness and collective effort.
-</p>
-</div>
+    <div>
+      <span class="section-label">Our approach</span>
+      <h2>Opportunity grows when communities take part.</h2>
+      <p>
+        We believe lasting progress is strengthened by access to learning,
+        practical skills, awareness and collective effort.
+      </p>
+    </div>
 
-<div class="approach-note">
-The Society’s listed activities span skill training, social
-awareness, community engagement, creative expression and digital
-learning. Programme schedules and availability may vary.
-</div>
+    <div class="approach-note">
+      The Society’s listed activities span skill training, social
+      awareness, community engagement, creative expression and digital
+      learning. Programme schedules and availability may vary.
+    </div>
 
-</div>
+  </div>
 </section>
 
-<!-- CALL TO ACTION -->
-
 <section class="cta">
-<div class="container">
+  <div class="container">
+    <div class="cta-box">
 
-<div class="cta-box">
+      <div>
+        <h2>Be part of positive change.</h2>
+        <p>
+          Connect with the Society to learn more about its activities,
+          participation and collaboration opportunities.
+        </p>
+      </div>
 
-<div>
-<h2>Be part of positive change.</h2>
-<p>
-Connect with the Society to learn more about its activities,
-participation and collaboration opportunities.
-</p>
-</div>
+      <a class="btn btn-primary" href="contact.html">
+        Contact the Society <span>↗</span>
+      </a>
 
-<a class="btn btn-primary" href="contact.html">
-Contact the Society <span>↗</span>
-</a>
-
-</div>
-
-</div>
+    </div>
+  </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
-
 <footer>
-<div class="container">
+  <div class="container">
 
-<div class="footer-top">
+    <div class="footer-top">
 
-<div>
-<a class="brand" href="home.html">
-<span class="brand-mark">ع</span>
-<span class="brand-name">
-Ala Hazrat Tajushshariah Welfare Society
-<small>HUMANITY · DIGNITY · SERVICE</small>
-</span>
-</a>
+      <div>
+        <a class="brand" href="home.html">
+          <span class="brand-mark">ع</span>
+          <span class="brand-name">
+            Ala Hazrat Tajushshariah Welfare Society
+            <small>HUMANITY · DIGNITY · SERVICE</small>
+          </span>
+        </a>
 
-<p>
-A Bareilly-based non-profit working to support healthcare,
-education, skills development, women’s empowerment and community
-welfare through service.
-</p>
-</div>
+        <p>
+          A Bareilly-based non-profit working to support healthcare,
+          education, skills development, women’s empowerment and
+          community welfare through service.
+        </p>
+      </div>
 
-<div>
-<h4>Explore</h4>
-<div class="footer-links">
-<a href="home.html">Home</a>
-<a href="about.html">About the Society</a>
-<a href="home.html#work">Our work</a>
-<a href="founder.html">Founder</a>
-<a href="activities.html">Activities</a>
-</div>
-</div>
+      <div>
+        <h4>Explore</h4>
+        <div class="footer-links">
+          <a href="home.html">Home</a>
+          <a href="about.html">About the Society</a>
+          <a href="home.html#work">Our Work</a>
+          <a href="founder.html">Founder</a>
+          <a href="activities.html">Activities</a>
+        </div>
+      </div>
 
-<div>
-<h4>Get involved</h4>
-<div class="footer-links">
-<a href="contact.html">Contact the Society</a>
-<a href="mailto:officialfarmaanhasankhan@gmail.com">Email the team</a>
-<a href="tel:+917351172555">Call the team</a>
-<a href="https://farmaanhasankhan.com/" target="_blank" rel="noopener">Founder profile ↗</a>
-</div>
-</div>
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-links">
+          <a href="tel:+918057777749">+91 80577 77749</a>
+          <a href="tel:+919457166534">+91 94571 66534</a>
+          <a href="tel:+919639773313">+91 96397 73313</a>
+          <a href="contact.html">Contact the Society ↗</a>
+        </div>
+      </div>
 
-</div>
+    </div>
 
-<div class="footer-bottom">
-<span>
-© <span id="year"></span> Ala Hazrat Tajushshariah Welfare Society.
-All rights reserved.
-</span>
-<span>Humanity · Dignity · Service</span>
-</div>
+    <div class="footer-bottom">
+      <span>
+        © <span id="year"></span>
+        Ala Hazrat Tajushshariah Welfare Society.
+        All rights reserved.
+      </span>
+      <span>Humanity · Dignity · Service</span>
+    </div>
 
-</div>
+  </div>
 </footer>
 
-<!-- JAVASCRIPT -->
-
 <script>
-const menuBtn = document.getElementById('menuBtn');
-const nav = document.getElementById('navLinks');
+/* MOBILE NAVIGATION */
 
-menuBtn.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', String(open));
-    menuBtn.textContent = open ? '×' : '☰';
-});
+(function(){
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('navLinks');
 
-/* Activity category filtering */
-
-document.querySelectorAll('.filter').forEach(button => {
-    button.addEventListener('click', () => {
-
-        document.querySelectorAll('.filter').forEach(item => {
-            item.classList.remove('active');
-        });
-
-        button.classList.add('active');
-
-        let count = 0;
-
-        document.querySelectorAll('.activity-card').forEach(card => {
-
-            const show =
-                button.dataset.filter === 'all' ||
-                card.dataset.category === button.dataset.filter;
-
-            card.hidden = !show;
-
-            if (show) count++;
-        });
-
-        document.getElementById('no-results').hidden = count > 0;
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click',function(){
+      const isOpen = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',String(isOpen));
+      menuBtn.textContent = isOpen ? '×' : '☰';
     });
-});
 
-/* Automatic copyright year */
+    nav.querySelectorAll('a').forEach(link=>{
+      link.addEventListener('click',()=>{
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.textContent = '☰';
+      });
+    });
+
+    document.addEventListener('click',function(event){
+      if(!nav.contains(event.target) && !menuBtn.contains(event.target)){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.textContent = '☰';
+      }
+    });
+  }
+})();
+
+/* ACTIVITY FILTERS */
+
+(function(){
+  const filters = document.querySelectorAll('.filter');
+  const cards = document.querySelectorAll('.activity-card');
+  const noResults = document.getElementById('no-results');
+
+  filters.forEach(button=>{
+    button.addEventListener('click',function(){
+
+      filters.forEach(item=>item.classList.remove('active'));
+      button.classList.add('active');
+
+      const selected = button.dataset.filter;
+      let visibleCount = 0;
+
+      cards.forEach(card=>{
+        const matches =
+          selected === 'all' ||
+          card.dataset.category === selected;
+
+        card.hidden = !matches;
+
+        if(matches) visibleCount++;
+      });
+
+      noResults.hidden = visibleCount !== 0;
+    });
+  });
+})();
+
+/* COPYRIGHT YEAR */
 
 document.getElementById('year').textContent =
-    new Date().getFullYear();
-
-/* Scroll reveal animation */
-
-if ('IntersectionObserver' in window) {
-
-    const observer = new IntersectionObserver(entries => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-
-        });
-
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.reveal').forEach(element => {
-        observer.observe(element);
-    });
-
-} else {
-
-    document.querySelectorAll('.reveal').forEach(element => {
-        element.classList.add('visible');
-    });
-
-} else {
-
-    document.querySelectorAll('.reveal').forEach(element => {
-        element.classList.add('visible');
-    });
-
-}
+  new Date().getFullYear();
 </script>
 
 </body>
 </html>
+
+      
