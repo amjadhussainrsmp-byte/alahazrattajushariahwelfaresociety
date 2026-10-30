@@ -1,0 +1,845 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123d35">
+<meta name="description" content="Explore the projects and development initiatives of Ala Hazrat Tajushshariah Welfare Society, Bareilly, Uttar Pradesh.">
+<title>Our Projects | Ala Hazrat Tajushshariah Welfare Society</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --forest:#123d35;
+  --forest2:#1c594a;
+  --mint:#dff2e8;
+  --lime:#c7ee77;
+  --gold:#e5b96b;
+  --ink:#172b27;
+  --muted:#64736e;
+  --cream:#fbfaf5;
+  --white:#fff;
+  --line:rgba(18,61,53,.13);
+  --shadow:0 22px 70px rgba(13,43,36,.12);
+  --radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:'DM Sans',sans-serif;line-height:1.65;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.container{width:min(1180px,calc(100% - 44px));margin:auto}
+
+/* HEADER */
+header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(251,250,245,.97);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--line);
+}
+.nav{
+  min-height:82px;display:flex;align-items:center;
+  justify-content:space-between;gap:24px;
+}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand-mark{
+  width:47px;height:47px;border-radius:15px;
+  background:var(--forest);display:grid;place-items:center;
+  color:var(--lime);font-family:'Playfair Display',serif;
+  font-size:1.45rem;flex-shrink:0;
+}
+.brand-name{
+  font-family:Manrope,sans-serif;font-weight:800;
+  font-size:.92rem;line-height:1.2;max-width:265px;color:var(--forest);
+}
+.brand-name small{
+  display:block;margin-top:5px;font:800 .58rem 'DM Sans',sans-serif;
+  letter-spacing:.16em;color:var(--forest2);
+}
+.nav-links{
+  display:flex;align-items:center;gap:21px;
+  font-size:.82rem;font-weight:700;color:#3e514b;
+}
+.nav-links a{transition:.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--forest)}
+.nav-links a.active{position:relative}
+.nav-links a.active:after{
+  content:"";position:absolute;left:0;right:0;bottom:-11px;
+  height:2px;background:var(--gold);
+}
+.nav-cta{
+  background:var(--forest);color:white!important;
+  padding:12px 18px;border-radius:999px;
+}
+.nav-cta:after{display:none!important}
+.menu-btn{
+  display:none;border:0;background:none;color:var(--forest);
+  font-size:27px;padding:8px;
+}
+
+/* HERO */
+.hero{
+  position:relative;overflow:hidden;background:var(--forest);
+  color:white;min-height:405px;display:flex;align-items:center;
+}
+.hero:before{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,rgba(8,39,32,.97),rgba(8,39,32,.80)),
+    url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=2000&q=85')
+    center/cover;
+}
+.hero:after{
+  content:"";position:absolute;width:520px;height:520px;
+  border:1px solid rgba(199,238,119,.18);border-radius:50%;
+  right:-180px;top:-300px;
+  box-shadow:0 0 0 65px rgba(199,238,119,.035),
+             0 0 0 130px rgba(199,238,119,.025);
+}
+.hero-content{position:relative;z-index:2;padding:70px 0;max-width:780px}
+.breadcrumb{font-size:.78rem;color:#d6e8df;margin-bottom:24px}
+.breadcrumb a{color:white}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  text-transform:uppercase;letter-spacing:.16em;
+  font-size:.72rem;font-weight:800;color:var(--lime);
+}
+.eyebrow:before{content:"";width:25px;height:1px;background:var(--lime)}
+h1,h2,h3,h4{
+  font-family:Manrope,sans-serif;letter-spacing:-.045em;
+  line-height:1.12;margin-top:0;
+}
+h1{font-size:clamp(2.8rem,6vw,4.8rem);margin:20px 0 18px;font-weight:800}
+h1 em{
+  font-family:'Playfair Display',serif;font-weight:600;color:var(--lime);
+}
+.hero p{font-size:1rem;line-height:1.8;color:#d0e0d9;max-width:650px;margin:0}
+
+/* TICKER */
+.ticker{
+  background:var(--lime);color:var(--forest);
+  overflow:hidden;white-space:nowrap;padding:13px 0;
+  font-weight:800;font-size:.76rem;letter-spacing:.13em;
+}
+.ticker-track{display:flex;justify-content:space-around;gap:38px;min-width:max-content}
+.ticker-track span:after{content:"✳";margin-left:38px;color:var(--forest2)}
+
+/* INTRO */
+.intro{padding:75px 0 35px}
+.intro-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:55px;align-items:end;
+}
+.section-label{
+  color:var(--forest2);font-size:.72rem;font-weight:800;
+  letter-spacing:.17em;text-transform:uppercase;
+}
+.intro h2{
+  font-size:clamp(2rem,4vw,3rem);color:var(--forest);
+  margin:12px 0 0;
+}
+.intro p{color:var(--muted);font-size:.94rem;line-height:1.85;margin:0}
+
+/* PROJECT FILTER */
+.projects-section{padding:25px 0 85px}
+.filter-row{
+  display:flex;align-items:center;gap:10px;
+  flex-wrap:wrap;margin:0 0 30px;
+}
+.filter-btn{
+  border:1px solid var(--line);background:transparent;
+  color:#43564f;border-radius:999px;padding:11px 18px;
+  font-size:.79rem;font-weight:800;transition:.2s;
+}
+.filter-btn:hover,.filter-btn.active{
+  background:var(--forest);border-color:var(--forest);color:white;
+}
+.project-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+}
+.project-card{
+  background:white;border:1px solid var(--line);
+  border-radius:21px;overflow:hidden;
+  transition:transform .25s,box-shadow .25s;
+}
+.project-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.project-visual{
+  min-height:225px;position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;padding:24px;
+  background:var(--forest);
+}
+.project-visual:before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(7,35,29,.8),rgba(7,35,29,.05));
+}
+.project-visual img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;transition:transform .5s;
+}
+.project-card:hover .project-visual img{transform:scale(1.05)}
+.project-visual-content{position:relative;z-index:1;color:white}
+.project-number{
+  display:block;color:var(--lime);font-size:.68rem;
+  font-weight:800;letter-spacing:.16em;margin-bottom:9px;
+}
+.project-visual h3{
+  font-size:1.55rem;margin:0;color:white;letter-spacing:-.035em;
+}
+.project-body{padding:25px 26px 27px}
+.project-tag{
+  display:inline-block;background:var(--mint);color:var(--forest);
+  padding:6px 11px;border-radius:999px;font-size:.65rem;
+  font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  margin-bottom:14px;
+}
+.project-body h3{
+  font-size:1.25rem;color:var(--forest);margin:0 0 12px;
+}
+.project-body p{
+  color:var(--muted);font-size:.86rem;line-height:1.85;margin:0 0 17px;
+}
+.project-points{
+  display:grid;gap:9px;margin:0;padding:0;list-style:none;
+}
+.project-points li{
+  display:flex;align-items:flex-start;gap:10px;
+  color:#43564f;font-size:.79rem;
+}
+.project-points li:before{
+  content:"✓";color:var(--forest2);font-weight:800;
+}
+.project-footer{
+  margin-top:22px;padding-top:17px;border-top:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+}
+.project-footer span{font-size:.7rem;color:#85928b}
+.project-link{
+  font-size:.76rem;font-weight:800;color:var(--forest2);
+}
+.project-link:hover{color:#9b702b}
+.project-card[hidden]{display:none}
+
+/* FEATURED UPSDM */
+.featured{padding:0 0 85px}
+.featured-box{
+  display:grid;grid-template-columns:1fr 1fr;
+  background:var(--mint);border-radius:25px;overflow:hidden;
+}
+.featured-image{min-height:390px;position:relative}
+.featured-image img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
+.featured-content{padding:42px 42px;display:flex;flex-direction:column;justify-content:center}
+.featured-content h2{
+  color:var(--forest);font-size:clamp(1.8rem,3vw,2.5rem);margin:13px 0;
+}
+.featured-content p{
+  color:#53665e;font-size:.88rem;line-height:1.9;margin:0 0 18px;
+}
+.featured-list{display:grid;gap:10px;margin:0 0 24px;padding:0;list-style:none}
+.featured-list li{font-size:.81rem;color:var(--forest);display:flex;gap:10px}
+.featured-list li:before{content:"✳";color:#9b702b}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:13px 19px;border-radius:999px;font-weight:800;
+  font-size:.81rem;transition:.2s;width:max-content;
+}
+.btn-dark{background:var(--forest);color:white}
+.btn-dark:hover{background:var(--forest2)}
+
+/* APPROACH */
+.approach{padding:0 0 85px}
+.approach-heading{text-align:center;max-width:700px;margin:0 auto 35px}
+.approach-heading h2{
+  color:var(--forest);font-size:clamp(2rem,4vw,2.8rem);margin:12px 0;
+}
+.approach-heading p{color:var(--muted);font-size:.9rem;line-height:1.8}
+.approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.approach-card{
+  padding:25px 23px;background:white;border:1px solid var(--line);
+  border-radius:18px;
+}
+.approach-icon{
+  width:43px;height:43px;display:grid;place-items:center;
+  background:var(--mint);color:var(--forest);
+  border-radius:14px;font-size:19px;margin-bottom:17px;
+}
+.approach-card h3{font-size:1rem;color:var(--forest);margin:0 0 8px}
+.approach-card p{font-size:.8rem;color:var(--muted);line-height:1.8;margin:0}
+
+/* CTA */
+.cta{padding:0 0 82px}
+.cta-box{
+  background:var(--forest);border-radius:var(--radius);
+  padding:42px 48px;color:white;display:flex;
+  align-items:center;justify-content:space-between;gap:25px;
+}
+.cta-box h2{font-size:clamp(1.7rem,3.5vw,2.5rem);margin:0 0 10px}
+.cta-box p{color:#d0e0d9;font-size:.86rem;margin:0;max-width:550px}
+.btn-lime{background:var(--lime);color:var(--forest);flex-shrink:0}
+
+/* FOOTER */
+footer{background:#0c2d27;color:white;padding:55px 0 22px}
+.footer-top{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr;
+  gap:45px;padding-bottom:35px;border-bottom:1px solid rgba(255,255,255,.13);
+}
+footer .brand-name{color:white}
+footer .brand-name small{color:var(--lime)}
+.footer-top p{max-width:380px;color:#c4d9cf;font-size:.82rem;line-height:1.8;margin:17px 0 0}
+.footer-top h4{font-size:.9rem;letter-spacing:0;color:white;margin:7px 0 16px}
+.footer-links{display:grid;gap:10px}
+.footer-links a{font-size:.8rem;color:#c4d9cf}
+.footer-links a:hover{color:var(--lime)}
+.footer-bottom{
+  display:flex;justify-content:space-between;gap:20px;
+  padding-top:20px;color:#9bb5aa;font-size:.72rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:950px){
+  .nav-links{gap:12px;font-size:.75rem}
+  .project-grid{gap:15px}
+}
+@media(max-width:680px){
+  .container{width:calc(100% - 34px)}
+  .nav{min-height:74px}
+  .brand-mark{width:42px;height:42px}
+  .brand-name{font-size:.78rem;max-width:230px}
+  .menu-btn{display:block}
+  .nav-links{
+    display:none;position:absolute;top:74px;left:16px;right:16px;
+    background:var(--cream);padding:14px;border:1px solid var(--line);
+    border-radius:16px;box-shadow:var(--shadow);
+    flex-direction:column;align-items:stretch;gap:0;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px 8px}
+  .nav-links a.active:after{display:none}
+  .nav-cta{margin-top:5px;text-align:center}
+  .hero{min-height:360px}
+  .hero-content{padding:55px 0}
+  .hero p{font-size:.92rem}
+  .intro{padding:52px 0 28px}
+  .intro-grid{grid-template-columns:1fr;gap:18px}
+  .projects-section{padding:18px 0 60px}
+  .filter-row{gap:8px;margin-bottom:22px}
+  .filter-btn{padding:10px 14px;font-size:.74rem}
+  .project-grid{grid-template-columns:1fr;gap:15px}
+  .project-visual{min-height:205px}
+  .project-body{padding:22px}
+  .featured{padding-bottom:60px}
+  .featured-box{grid-template-columns:1fr}
+  .featured-image{min-height:240px}
+  .featured-content{padding:30px 24px}
+  .approach{padding-bottom:60px}
+  .approach-grid{grid-template-columns:1fr;gap:12px}
+  .cta{padding-bottom:55px}
+  .cta-box{padding:30px 24px;align-items:flex-start;flex-direction:column}
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px}
+  .footer-top>div:first-child{grid-column:1/-1}
+  .footer-bottom{flex-direction:column;gap:7px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="home.html">
+      <span class="brand-mark">ع</span>
+      <span class="brand-name">
+        Ala Hazrat Tajushshariah Welfare Society
+        <small>HUMANITY · DIGNITY · SERVICE</small>
+      </span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn"
+      aria-label="Open navigation" aria-expanded="false"
+      aria-controls="navLinks">☰</button>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="home.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="home.html#work">Our Work</a>
+      <a href="founder.html">Founder</a>
+      <a href="activities.html">Activities</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="gallery.html">Gallery</a>
+      <a class="nav-cta" href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="breadcrumb">
+        <a href="home.html">Home</a> &nbsp; / &nbsp; Projects
+      </div>
+      <span class="eyebrow">Turning purpose into progress</span>
+      <h1>Projects that<br><em>create possibilities.</em></h1>
+      <p>
+        Discover the development initiatives and programme areas
+        through which Ala Hazrat Tajushshariah Welfare Society
+        works towards skills, awareness, opportunity and
+        stronger communities.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="ticker">
+  <div class="ticker-track">
+    <span>SKILLS FOR TOMORROW</span>
+    <span>COMMUNITY DEVELOPMENT</span>
+    <span>LEARNING AND OPPORTUNITY</span>
+    <span>HUMANITY · DIGNITY · SERVICE</span>
+    <span>SKILLS FOR TOMORROW</span>
+  </div>
+</div>
+
+<section class="intro">
+  <div class="container intro-grid">
+    <div>
+      <span class="section-label">Our projects</span>
+      <h2>Building opportunities, one initiative at a time.</h2>
+    </div>
+    <p>
+      Our work brings together skill development, education,
+      digital inclusion, community participation and awareness.
+      Each initiative reflects our commitment to creating
+      opportunities and encouraging positive social change.
+    </p>
+  </div>
+</section>
+
+<section class="projects-section">
+  <div class="container">
+
+    <div class="filter-row" aria-label="Filter projects">
+      <button class="filter-btn active" data-filter="all">All projects</button>
+      <button class="filter-btn" data-filter="skills">Skill development</button>
+      <button class="filter-btn" data-filter="education">Education & digital</button>
+      <button class="filter-btn" data-filter="community">Community</button>
+      <button class="filter-btn" data-filter="awareness">Awareness</button>
+    </div>
+
+    <div class="project-grid" id="projectGrid">
+
+      <!-- PROJECT 01 -->
+      <article class="project-card" data-category="skills">
+        <div class="project-visual">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=85"
+               alt="Students participating in a learning programme" loading="lazy">
+          <div class="project-visual-content">
+            <span class="project-number">PROJECT 01</span>
+            <h3>UPSDM Skill Development</h3>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-tag">Skill development</span>
+          <h3>Uttar Pradesh Skill Development Mission</h3>
+          <p>
+            The Society's association with the Uttar Pradesh Skill
+            Development Mission reflects its commitment to
+            vocational learning and employability-oriented training.
+          </p>
+          <ul class="project-points">
+            <li>Vocational and employment-oriented skills</li>
+            <li>Training opportunities for aspiring learners</li>
+            <li>Focus on practical knowledge and capabilities</li>
+          </ul>
+          <div class="project-footer">
+            <span>Uttar Pradesh</span>
+            <a class="project-link" href="https://www.upsdm.gov.in/" target="_blank" rel="noopener">
+              UPSDM website ↗
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 02 -->
+      <article class="project-card" data-category="skills">
+        <div class="project-visual">
+          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
+               alt="People learning together in a workshop" loading="lazy">
+          <div class="project-visual-content">
+            <span class="project-number">PROJECT 02</span>
+            <h3>Vocational Training</h3>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-tag">Skills & livelihoods</span>
+          <h3>Practical Skills and Training</h3>
+          <p>
+            Learning opportunities in practical and vocational
+            fields can help individuals strengthen their abilities,
+            explore livelihoods and develop confidence.
+          </p>
+          <ul class="project-points">
+            <li>Tailoring and handicraft skills</li>
+            <li>Beauty and wellness learning</li>
+            <li>Entrepreneurship awareness</li>
+          </ul>
+          <div class="project-footer">
+            <span>Vocational learning</span>
+            <a class="project-link" href="activities.html">Explore activities ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 03 -->
+      <article class="project-card" data-category="education">
+        <div class="project-visual">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85"
+               alt="Digital learning and computer education" loading="lazy">
+          <div class="project-visual-content">
+            <span class="project-number">PROJECT 03</span>
+            <h3>Digital Literacy</h3>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-tag">Education & technology</span>
+          <h3>Digital Literacy and Online Learning</h3>
+          <p>
+            Promoting familiarity with digital tools and online
+            resources to help learners participate more confidently
+            in an increasingly connected world.
+          </p>
+          <ul class="project-points">
+            <li>Computer and internet fundamentals</li>
+            <li>Digital tools and online learning</li>
+            <li>Awareness of internet safety</li>
+          </ul>
+          <div class="project-footer">
+            <span>Digital inclusion</span>
+            <a class="project-link" href="activities.html">Explore activities ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 04 -->
+      <article class="project-card" data-category="community">
+        <div class="project-visual">
+          <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1000&q=85"
+               alt="Community members working together" loading="lazy">
+          <div class="project-visual-content">
+            <span class="project-number">PROJECT 04</span>
+            <h3>Community Welfare</h3>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-tag">Community development</span>
+          <h3>Community Support Initiatives</h3>
+          <p>
+            Encouraging community participation and solidarity
+            through welfare-oriented activities and support for
+            people in need.
+          </p>
+          <ul class="project-points">
+            <li>Community engagement programmes</li>
+            <li>Distribution of essential supplies</li>
+            <li>Participation in local welfare activities</li>
+          </ul>
+          <div class="project-footer">
+            <span>Community participation</span>
+            <a class="project-link" href="gallery.html">View gallery ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 05 -->
+      <article class="project-card" data-category="awareness">
+        <div class="project-visual">
+          <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1000&q=85"
+               alt="People taking part in a public awareness programme" loading="lazy">
+          <div class="project-visual-content">
+            <span class="project-number">PROJECT 05</span>
+            <h3>Awareness Campaigns</h3>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-tag">Public awareness</span>
+          <h3>Awareness and Social Responsibility</h3>
+          <p>
+            Promoting informed communities through awareness
+            initiatives addressing important social, educational
+            and public welfare subjects.
+          </p>
+          <ul class="project-points">
+            <li>Education and child welfare awareness</li>
+            <li>Health, hygiene and road safety</li>
+            <li>Women's rights and digital awareness</li>
+          </ul>
+          <div class="project-footer">
+            <span>Social awareness</span>
+            <a class="project-link" href="activities.html">Explore activities ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 06 -->
+      <article class="project-card" data-category="education">
+        <div class="project-visual">
+          <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1000&q=85"
+               alt="Young people participating in a group activity" loading="lazy">
+          <div class="project-visual-content">
+            <span class="project-number">PROJECT 06</span>
+            <h3>Youth & Talent</h3>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-tag">Youth engagement</span>
+          <h3>Youth Participation and Talent Development</h3>
+          <p>
+            Creating opportunities for young people to participate,
+            express their abilities, learn together and engage
+            constructively with their communities.
+          </p>
+          <ul class="project-points">
+            <li>Creative and cultural participation</li>
+            <li>Talent and skill-sharing activities</li>
+            <li>Learning through community engagement</li>
+          </ul>
+          <div class="project-footer">
+            <span>Youth engagement</span>
+            <a class="project-link" href="activities.html">Explore activities ↗</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECT -->
+
+<section class="featured">
+  <div class="container">
+    <div class="featured-box">
+
+      <div class="featured-image">
+        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85"
+             alt="People working together in a professional learning environment"
+             loading="lazy">
+      </div>
+
+      <div class="featured-content">
+        <span class="section-label">Skill development initiative</span>
+        <h2>Building skills for a better tomorrow.</h2>
+        <p>
+          Skill development can open pathways to employment,
+          self-reliance and personal growth. Through its work
+          associated with the Uttar Pradesh Skill Development
+          Mission, the Society seeks to contribute to a culture
+          of practical learning and opportunity.
+        </p>
+        <ul class="featured-list">
+          <li>Vocational learning and practical training</li>
+          <li>Employability-oriented skill development</li>
+          <li>Encouraging confidence and self-reliance</li>
+        </ul>
+        <a class="btn btn-dark" href="https://www.upsdm.gov.in/"
+           target="_blank" rel="noopener">
+          Visit UPSDM website ↗
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- OUR APPROACH -->
+
+<section class="approach">
+  <div class="container">
+
+    <div class="approach-heading">
+      <span class="section-label">Our approach</span>
+      <h2>Purpose behind every initiative.</h2>
+      <p>
+        We believe that meaningful development begins with
+        understanding people's needs, creating access to
+        opportunities and encouraging active participation.
+      </p>
+    </div>
+
+    <div class="approach-grid">
+
+      <article class="approach-card">
+        <div class="approach-icon">◎</div>
+        <h3>People-centred</h3>
+        <p>
+          Keeping individuals, families and community needs
+          at the heart of development initiatives.
+        </p>
+      </article>
+
+      <article class="approach-card">
+        <div class="approach-icon">✳</div>
+        <h3>Learning-oriented</h3>
+        <p>
+          Encouraging practical knowledge, skill development
+          and lifelong learning.
+        </p>
+      </article>
+
+      <article class="approach-card">
+        <div class="approach-icon">↗</div>
+        <h3>Community participation</h3>
+        <p>
+          Bringing people together to contribute to
+          constructive and inclusive social change.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+  <div class="container">
+    <div class="cta-box">
+      <div>
+        <h2>Be part of something meaningful.</h2>
+        <p>
+          Interested in our projects, volunteering or exploring
+          a possible collaboration? We would be glad to hear from you.
+        </p>
+      </div>
+      <a class="btn btn-lime" href="contact.html">Connect with us ↗</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-top">
+
+      <div>
+        <a class="brand" href="home.html">
+          <span class="brand-mark">ع</span>
+          <span class="brand-name">
+            Ala Hazrat Tajushshariah Welfare Society
+            <small>HUMANITY · DIGNITY · SERVICE</small>
+          </span>
+        </a>
+        <p>
+          A Bareilly-based non-profit working to support education,
+          skill development, empowerment and community welfare
+          through service and participation.
+        </p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <div class="footer-links">
+          <a href="home.html">Home</a>
+          <a href="about.html">About the Society</a>
+          <a href="founder.html">Founder</a>
+          <a href="activities.html">Activities</a>
+          <a href="projects.html">Projects</a>
+          <a href="gallery.html">Gallery</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-links">
+          <a href="tel:+918057777749">+91 80577 77749</a>
+          <a href="tel:+919457166534">+91 94571 66534</a>
+          <a href="tel:+919639773313">+91 96397 73313</a>
+          <a href="contact.html">Contact the Society ↗</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>
+        © <span id="year"></span>
+        Ala Hazrat Tajushshariah Welfare Society.
+        All rights reserved.
+      </span>
+      <span>Humanity · Dignity · Service</span>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+/* MOBILE NAVIGATION */
+(function(){
+  const menuBtn=document.getElementById('menuBtn');
+  const nav=document.getElementById('navLinks');
+
+  if(!menuBtn || !nav) return;
+
+  menuBtn.addEventListener('click',()=>{
+    const open=nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',String(open));
+    menuBtn.textContent=open?'×':'☰';
+  });
+
+  nav.querySelectorAll('a').forEach(link=>{
+    link.addEventListener('click',()=>{
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+      menuBtn.textContent='☰';
+    });
+  });
+
+  document.addEventListener('click',event=>{
+    if(!nav.contains(event.target) && !menuBtn.contains(event.target)){
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+      menuBtn.textContent='☰';
+    }
+  });
+})();
+
+/* PROJECT FILTERS */
+(function(){
+  const buttons=document.querySelectorAll('.filter-btn');
+  const cards=document.querySelectorAll('.project-card');
+
+  buttons.forEach(button=>{
+    button.addEventListener('click',()=>{
+      const filter=button.dataset.filter;
+
+      buttons.forEach(item=>item.classList.remove('active'));
+      button.classList.add('active');
+
+      cards.forEach(card=>{
+        card.hidden=filter!=='all' && card.dataset.category!==filter;
+      });
+    });
+  });
+})();
+
+/* COPYRIGHT YEAR */
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
+
+
+
+
+  
